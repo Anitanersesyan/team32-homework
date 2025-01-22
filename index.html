@@ -1,111 +1,192 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Anita v1</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anita Nersesyan</title>
-   <link rel="stylesheet" href="style.css">
-  </hwad>
-  <body>
-      <nav>
-    <ul class="nav">
-      <li><a href="#header">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-          </nav>
-  
- <header class="header" id="header">
-    <h1>Anita Nersesyan</h1>
-    <h2>Web Developer</h2>
-  </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Week 2 Homework</title>
+    <link rel="stylesheet" type="text/css" href="./Styles/app.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
 
-     <section class="about" id="about"> 
-       <div class="container">
-         <div class="about-content">
-           <div class="photo">
-             <img src="https://media.licdn.com/dms/image/v2/D4D03AQG81uFiQlJmCQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720894088136?e=1742428800&v=beta&t=NGLGf_qDXbr11yMlWgIUYag4LYiHGEVPw1X2p2xW3Ak" alt="Anita Nersesyan">
-              </div>
-           
-       <div class="description">
-    <h2>About Me</h2>
-    <p>Hi there! I'm Anita Nersesyan, a passionate and creative Web Developer with a strong foundation in both Business Economics and Information Technology. I have a knack for combining technical expertise with strategic thinking, which allows me to create impactful and user-friendly websites and applications.
+  <section class="head">
+        <header>
+            <div class="search-bar">
+                <button class="search-botton">🔍</button>
+                <input type="text" placeholder="How" value="How" class="search-input" />
+                <button type="reset" class="clear-botton">X</button>
+            </div>
 
-I love problem-solving and continuously learning new technologies to enhance my skill set.
-
-Feel free to connect with me, and let's create something amazing together
-
-</p>
-                 </div>
-             </div>
-         </div>
-  </section>
-
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <h3>Education</h3>
-                    <p>Bachelor’s Degree in Business Economics and Information Technology
-(KEA – Copenhagen School of Design and Technology)
-                  Web Development Course (HackYourFuture) </p>
+            <nav class="tabs">
+                <a href="#" class="tab" >Campaigns</a>
+                <a href="#" class="tab">Contacts</a>
+                <a href="#" class="tab">Help articles</a>
+            </nav>
+        </header>
+    </section>
+    <section class="info">
+        <div class="results">
+            <p class="result-text">Found 625 results for How</p>
+            <div class="language-container">
+            <p class="language-preference">Language preference <span class="language">English ▼</span>
+            </p>
+            
+              
+                
+        
+        </div>
+        </div>
+    </section>
+<section>
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">How Throttling Improves Deliverability</h3>
+                    <p class="content-description">
+                        Mailchimp aims to deliver your campaigns as quickly as possible. However, postponing delivery can help us stop spam and ensure your email reaches inboxes.
+                    </p>
                 </div>
-                <div class="portfolio-item">
-                    <h3>Technical Skills</h3>
-                    <p>UML; HTML; CSS; Phyton; Agile;</p>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">How to Create an Account</h3>
+                    <p class="content-description">
+                        Are you ready to create a Mailchimp account? This guide will walk you through the entire process, from sign up to activation.
+                    </p>
                 </div>
-                <div class="portfolio-item">
-                    <h3>Projects</h3>
-                    <p>Survey Form</p> 
-                  <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form" target="_blank">View Project</a>
-    </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">How the Form Builder Works</h3>
+                    <p class="content-description">
+                        Learn how to customize forms, welcome emails, and other response emails with our Form Builder.
+                    </p>
                 </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">How Mailchimp Prevents and Handles Abuse</h3>
+                    <p class="content-description">
+                        Learn the steps we take to prevent abuse of our system, and how we handle abuse when it happens.
+                    </p>
+                </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">How to Allowlist Delivery IP Addresses</h3>
+                    <p class="content-description">
+                        Learn how to enable company allowlisting to help ensure your Mailchimp campaigns get to all your subscribers.
+                    </p>
+                </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">How Legitimate Marketers Can Prevent Spam Complaints</h3>
+                    <p class="content-description">
+                        Learn why audiences generate abuse complaints, and steps to take to prevent them.                    </p>
+                </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">How Mailchimp Can Help Your Online Store</h3>
+                    <p class="content-description">
+                        Mailchimp´s e-commerce tools help you grow your business and sell more stuff. Find new audiences, promote your products, boost customer loyalty, and track your sales.                </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">Apple Privacy Update FAQs</h3>
+                    <p class="content-description">
+                        In this article, you'll get answers to common questions about Apple's new privacy protection update.                    </p>
+                </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">About Authorized Applications</h3>
+                    <p class="content-description">
+                        Learn about authorized applications and what it means to grant access to your account information.                </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <h3 class="content-header">About Geolocation</h3>
+                    <p class="content-description">
+                        Mailchimp determines location and time zone for your subscribers by collecting data when they sign up for your marketing or interact with your email campaigns.                    </p>
+                </div>
+                <div class="arrow-right"></div>
+            </div>
+        </div>
+
+        <div class="results-number">
+            <p class="results-text"> 1 - 10 of 625 results </p>
+            <div class="arrows">
+                <button>◀</button>
+                <button>▶</button>
             </div>
         </div>
     </section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <form class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <section class="bottompage">
+<div class="support-container">
+    <h2 class="support-header">Contact support</h2>
+    <p class="support-paragraph">
+        You have 24/7 access to award-winning live chat and email support with your paid plan.
+    </p>
+    <div class="support-buttons">
+        <button class="support-button email-button">Email us</button>
+        <button class="support-button chat-button">Chat with us</button>
+    </div>
+</div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+<div class="chat-assistant-container">
+    <p class="chat-assistant-text">Chat with Mailchimp Assistant 24/7 to get instant answers to many common questions.</p>
+    <button class="chat-assistant-button">
+        <i class="fa-regular fa-comment chat-button-icon"></i>
+        <span class="chat-button-text">Ask Mailchimp Assistant</span>
+    </button>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="" rows="5" required></textarea>
-
-                <button type="reset">Send</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-      </div>
-          <div class=contact-info>
-              <p><a class="links" href="https://www.linkedin.com/in/anita-nersesyan/" target="_blank">LinkedIn</a></p>
-    <p><a class="links" href="https://github.com/Anitanersesyan" target="_blank">GitHub</a></p>
-            <p>&copy; 2025 Anita Nersesyan. All Rights Reserved.</p>
-          </div>
-        </div>
-    </footer>
+    <div class="feedback-container">
+        <p class="feedback-text">
+            Have feedback? <a href="#" class="feedback-link">Let us know how we’re doing.</a>
+        </p>
+    </div>
+</div>
+</section>
 </body>
 </html>
-<!-- partial -->
-  
-</body>
-</html>
+
