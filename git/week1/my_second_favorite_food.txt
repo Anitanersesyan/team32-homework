@@ -1,0 +1,22 @@
+Creamy Chicken Pasta Recipe
+
+Ingredients:
+200g (7 oz) pasta of your choice (penne or fettuccine work well)
+2 chicken breasts, cut into small pieces
+1 cup heavy cream
+1/2 cup grated Parmesan cheese
+1/2 teaspoon salt
+1/4 teaspoon black pepper
+Optional: chopped parsley or basil for garnish
+
+Instructions:
+1. Cook Pasta: Bring a large pot of salted water to a boil. Cook pasta according to package instructions, then drain and set aside.
+2. Cook Chicken: In a large skillet, heat olive oil over medium-high heat. Add the chicken pieces and cook until golden brown and cooked through, about 5–7 minutes. Remove the chicken and set aside.
+3. Sauté Garlic: In the same skillet, add the minced garlic and sauté for 1 minute until fragrant.
+4. Make the Sauce: Reduce heat to medium. Add the heavy cream to the skillet and bring it to a gentle simmer. Stir in the Parmesan cheese, salt, and pepper until the cheese is melted and the sauce thickens slightly.
+5. Combine: Return the cooked chicken to the skillet and toss to coat in the sauce. Add the drained pasta and mix well until everything is evenly coated.
+6. Garnish and Serve: Sprinkle with chopped parsley or basil if desired. Serve immediately and enjoy >> git/week1/my_second_favorite_food.txt
+echo 6. Garnish and Serve: Sprinkle with chopped parsley or basil if desired. Serve immediately and enjoy!
+
+
+This creamy chicken pasta is perfect for a quick, delicious meal!
