@@ -13,7 +13,7 @@ const secondWords = ["Corporation", "Startup", "Company",   "Technologies", "Ven
 "Inc", "Works", "Group", "Enterprises", "Partners"];
 
 const randomNumber = Math.floor(Math.random() * 10);
-let startupName = `${firstWords[randomNumber]} ${secondWords[randomNumber]}`;
+const startupName = `${firstWords[randomNumber]} ${secondWords[randomNumber]}`;
 
 console.log(`The startup: ${startupName} contains ${startupName.length} characters`);
 
