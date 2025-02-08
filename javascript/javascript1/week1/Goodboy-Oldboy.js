@@ -13,9 +13,9 @@ let dogYear = dogYearFuture - dogYearOfBirth;
 let shouldShowResultInDogYears = true;
 
 if (shouldShowResultInDogYears) {
-    console.log(`Your dog will be 10 human years old in ${dogYearFuture}`);
+    console.log(`Your dog will be ${dogYear * 7} dog years old in ${dogYearFuture}`);
 } else {
-    console.log(`Your dog will be 70 dog years old in ${dogYearFuture}`);
+    console.log(`Your dog will be ${dogYear} human years old in ${dogYearFuture}`);
 }
 
 
