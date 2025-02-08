@@ -10,10 +10,19 @@ Figure out if Peter and Julia are paying too much or too little using Javascript
 let peterHouse = 8 * 10 * 10 * 2.5 * 1000 + 100 * 300;
 let juliaHouse = 5 * 11 * 8 * 2.5 * 1000 + 70 * 300;
 
-if (peterHouse > juliaHouse) {
-    console.log("Peter is paying too much");
-} else if (peterHouse < juliaHouse) {
-    console.log("Julia is paying too much");
+
+let peterHousePrice = 2500000;
+let juliaHousePrice = 1000000;
+
+
+if (peterHouse > peterHousePrice) {
+    console.log("Peter is paying too little");
 } else {
-    console.log("Both are paying the same amount");
+    console.log("Peter is paying too much");
+}
+
+if (juliaHouse > juliaHousePrice) {
+    console.log("Julia is paying too little");
+} else {
+    console.log("Julia is paying too much");
 }
