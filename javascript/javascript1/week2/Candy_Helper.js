@@ -21,30 +21,43 @@ Hint: Use a for loop to calculate the total price of the candy pieces.
 
 Optional Use a while loop instead of a for loop.*/
 
- const candyPrices = {
+const candyPrices = {
     sweet: 0.5,
     chocolate: 0.7,
     toffee: 1.1,
     chewingGum: 0.03
- }
+};
 
- const boughtCandy = [];
+const boughtCandy = [];
+const amountToSpend = Math.random() * 100;
 
- const amountToSpend = Math.random() * 100;
 function addCandy(candyType, weight) {
-if (candyPrices[candyType]) {
-    const totalCandyPrice = weight * candyPrices[candyType];
-    boughtCandy.push({candyType, weight, totalCandyPrice});
+    if (candyPrices[candyType]) {
+        const totalCandyPrice = weight * candyPrices[candyType];
+        boughtCandy.push({ candyType, weight, totalCandyPrice });
+    }
 }
 
-function canBuyMoreCandy(boughtCandy) {
-    if (amountToSpend > totalCandyPrice) {
+
+function canBuyMoreCandy() {
+    let totalSpent = 0;
+
+    for (let i = 0; i < boughtCandy.length; i++) {
+        totalSpent += boughtCandy[i].totalCandyPrice;
+    }
+
+    if (amountToSpend > totalSpent) {
         console.log("You can buy more, so please do!");
     } else {
         console.log("Enough candy for you!");
     }
 }
 
-addCandy("chocolate", 100);
+addCandy("chocolate", 5);
+addCandy("sweet", 15)
 
-console.log(canBuyMoreCandy());
+canBuyMoreCandy();
+
+addCandy("toffee", 10);
+addCandy(" chewingGum", 30);
+canBuyMoreCandy();
