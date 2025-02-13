@@ -22,18 +22,18 @@ Call the getNumberOfStudents to log out the number of students.
 const class07Students = [];
 function addStudentToClass(studentName) {
 
-    if (class07Students.length < 6) { 
+    if (studentName === "") {
+            console.log("Cannot add an empty string to a class"); 
+    }  
+    else if (class07Students.length < 6) { 
         class07Students.push(studentName);
 
     } else if (class07Students.includes(studentName)) { 
         console.log(`Student ${studentName} is already in the class`);
 
-    } else if (studentName === "Queen") {
+    } else if (studentName.toLowerCase() === "queen") {
             class07Students.push("Queen");
             
-    } else if (studentName === "") {
-            console.log("Cannot add an empty string to a class");
-
     } else {
         console.log("Cannot add more students to class 07");
     }
@@ -44,6 +44,7 @@ function getNumberOfStudents() {
 }
 
 addStudentToClass("Anita");
+addStudentToClass("");
 addStudentToClass("Elnaz");
 addStudentToClass("Vlad");
 addStudentToClass("Babak");
@@ -54,4 +55,4 @@ addStudentToClass("Anita");
 addStudentToClass("Queen");
 
 
-console.log(getNumberOfStudents());
+console.log(`There are ${getNumberOfStudents()} students in class 07 `);
