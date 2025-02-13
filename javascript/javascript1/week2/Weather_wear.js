@@ -9,9 +9,9 @@ console.log(clothesToWear); // Logs out: "shorts and a t-shirt" */
 const clothesToWear = function (todaysTemperature) {
     if (todaysTemperature <= 0) {
         return "Wear a hat";
-    } else if (todaysTemperature < 15) {
+    } else if (todaysTemperature <= 15) {
         return "Wear a jacket";
-    } else if (todaysTemperature < 25) {
+    } else if (todaysTemperature <= 25) {
         return "Wear a sweatshirt";
     } else {  
         return "Wear a t-shirt";
