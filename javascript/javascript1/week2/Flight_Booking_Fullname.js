@@ -34,7 +34,11 @@ function getFullname(firstName, lastName, useFormalName, gender) {
     }
    
     if (useFormalName) {
-        if (gender === "male") { 
+        if (gender !== "male" && gender !== "female") {  
+            return "Please specify gender as 'male' or 'female'.";
+        }
+            
+      else if (gender === "male") { 
             return `Lord ${firstName} ${lastName}`;
         }
         else {
@@ -53,6 +57,7 @@ const fullname5 = getFullname("", "");
 const fullname6 = getFullname("", "Larsen");
 const fullname7 = getFullname("Lucas", "Olsen", true, "male");
 const fullname8 = getFullname("Anna", "Toft", true, "female");
+const fullname9 = getFullname("Chris", "Smith", true, "undefined");
 
 
 console.log(fullname1);
@@ -63,3 +68,4 @@ console.log(fullname5);
 console.log(fullname6);
 console.log(fullname7);
 console.log(fullname8);
+console.log(fullname9);
