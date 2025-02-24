@@ -17,9 +17,7 @@ Create a function for calculating the activity a user has spent the most time on
 const activities = [];
 
 function addActivity(date, activity, duration) {
-    date = new Date(date);
-
-    if (!date || !activity || !duration) {
+       if (!date || !activity || !duration) {
         console.log("Please provide a date, activity, and duration");
         return;
     }
