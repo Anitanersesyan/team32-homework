@@ -147,6 +147,7 @@ console.log(getReply("What is 12 * 2?"));
 console.log(getReply("What is 100 / 10?"));
 console.log(getReply("Set a timer for 4 minutes"));
 console.log(getReply("Set a timer for 20 minutes"));
+console.log(getReply("Set a timer for a minutes"));
 
  
 
