@@ -51,22 +51,19 @@ function getReply(command) {
         }
     }
     
-    if (command === "Add fishing to my todo") {
-        toDoArray.push("fishing");
-        return "Fishing added to your todo.";
-    }
+if (command.startsWith("Add ") && command.endsWith(" to my todo")) {
+	const task = command.replace("Add ", "").replace(" to my todo", "");
+	toDoArray.push(task);
+	return ${task} added to your todo.;
+};
 
-    if (command === "Add singing in the shower to my todo") {
-        toDoArray.push("singing in the shower");
-        return "Singing in the shower added to your todo.";
-    }
-
+        
     if (command === "Remove fishing from my todo") {
         for (let i = 0; i < toDoArray.length; i++) {
             if (toDoArray[i] === "fishing") { 
                 toDoArray.splice(i, 1);
                 return "Removed fishing from your todo."; 
-            }
+            };
         }
     }
 
