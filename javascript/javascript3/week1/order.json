@@ -1,0 +1,15 @@
+{
+    "order1": {
+        "orderID": "1",
+        "price": "50",
+        "drinks": ["Coke", "Sprite"],
+        "extras": ["Cheese", "Lettuce"]
+    },
+
+    "order2": {
+        "orderID": "2",
+        "price": "80",
+        "drinks": ["Coke", "Sprite"],
+        "extras": ["Cheese", "Lettuce"]
+    }
+}
