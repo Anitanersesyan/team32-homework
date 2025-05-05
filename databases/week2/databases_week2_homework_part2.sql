@@ -15,7 +15,7 @@ CREATE TABLE student (
     name VARCHAR(255),
     email VARCHAR(255),
     phone VARCHAR(20),
-    class_id INT UNSIGNED REFERENCES class (id)
+    FOREIGN KEY class_id REFERENCES class(id)
 ) ENGINE = InnoDB;
 
 /*If you are done with the above tasks, you can continue with these advanced tasks: */
