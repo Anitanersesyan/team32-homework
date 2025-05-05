@@ -104,7 +104,7 @@ VALUES (
         '2025-05-05'
     );
 
--- Sample data for Review table
+-- Sample data for Reservationtable
 INSERT INTO
     reservation (
         number_of_guests,
