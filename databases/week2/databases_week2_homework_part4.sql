@@ -54,3 +54,19 @@ CREATE TABLE enrollment (
     FOREIGN KEY (hyf_student_id) REFERENCES hyf_student (id),
     FOREIGN KEY (course_id) REFERENCES course (id)
 );
+
+CREATE TABLE mentor_team (
+    mentor_id BIGINT, 
+    team_id BIGINT,   
+    PRIMARY KEY (mentor_id, team_id),
+    FOREIGN KEY (mentor_id) REFERENCES mentor(id),
+    FOREIGN KEY (team_id) REFERENCES team(id)
+);
+
+CREATE TABLE staff_team (
+    staff_id BIGINT,   
+    team_id BIGINT,    
+    PRIMARY KEY (staff_id, team_id),
+    FOREIGN KEY (staff_id) REFERENCES staff(id),
+    FOREIGN KEY (team_id) REFERENCES team(id)
+);
