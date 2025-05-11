@@ -19,7 +19,6 @@ VALUES (
         'Spanish Tapas',
         'A delightful evening of Spanish tapas and wine.',
         'Barcelona',
-        '2025-06-01 19:00:00',
         20,
         30.00,
         '2025-05-10'
@@ -118,13 +117,11 @@ SELECT * FROM meal WHERE price < 90;
 -- 2. Get meals that still has available reservations
 SELECT *
 FROM meal
-WHERE
-    max_reservations > (
-        SELECT COUNT(*)
-        FROM reservation
-        WHERE
-            meal_id = meal.id
-    );
+WHERE max_reservations > (
+    SELECT COALESCE(SUM(number_of_guests), 0)
+    FROM reservation
+    WHERE meal_id = meal.id
+);
 
 -- 3. Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT * FROM meal WHERE title LIKE '%Brunch%';
@@ -155,7 +152,7 @@ ORDER BY created_date DESC;
 -- 8. Sort all meals by average number of stars in the reviews
 SELECT meal.title, AVG(review.stars) AS average_stars
 FROM meal
-    JOIN review ON meal.id = review.meal_id
+    LEFT JOIN review ON meal.id = review.meal_id
 GROUP BY
     meal.id,
     meal.title
