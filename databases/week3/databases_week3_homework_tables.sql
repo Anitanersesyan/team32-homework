@@ -4,21 +4,21 @@ CREATE TABLE meal (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255),
     description TEXT,
-    location VARCHAR(255),
-    when_time DATETIME,
-    max_reservations INT,
-    price DECIMAL(10, 2),
-    created_date DATE
+    location VARCHAR(255) NOT NULL,
+    when_time DATETIME NOT NULL,
+    max_reservations INT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    created_date NOT NULL DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE reservation (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    number_of_guests INT,
-    meal_id INT,
-    created_date DATE,
-    contact_phonenumber VARCHAR(255),
-    contact_name VARCHAR(255),
-    contact_email VARCHAR(255),
+    number_of_guests INT NOT NULL,
+    meal_id INT NOT NULL,
+    created_date DEFAULT CURRENT_DATE,
+    contact_phonenumber VARCHAR(255) NOT NULL,
+    contact_name VARCHAR(255) NOT NULL,
+    contact_email VARCHAR(255) NOT NULL,
     FOREIGN KEY (meal_id) REFERENCES meal (id)
 );
 
@@ -32,15 +32,13 @@ CREATE TABLE review (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255),
     description TEXT,
-    meal_id INT,
-    stars INT,
-    created_date DATE,
+    meal_id INT NOT NULL,
+    stars INT NOT NULL,
+    created_date DEFAULT CURRENT_DATE,
     FOREIGN KEY (meal_id) REFERENCES meal (id)
 );
 
 --Drop foreign key constraint and re-add it with ON DELETE CASCADE to ensure that when a meal is deleted, all associated reservations are also deleted. (Otherwise you would get an error in query 5)
-ALTER TABLE review DROP FOREIGN KEY review_ibfk_1;
-
 ALTER table review
 ADD FOREIGN KEY (meal_id) REFERENCES meal (id) ON DELETE CASCADE
 
