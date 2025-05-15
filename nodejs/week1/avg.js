@@ -7,12 +7,12 @@ $ node avg.js 13 7 4
 
 const args = process.argv.slice(2);
 
-const numbers = args.map(Number);
-
 if (numbers.length === 0) {
   console.error("Please provide at least one number to calculate the average.");
   process.exit(1);
 }
+
+const numbers = args.map(s => Number(s.replace(/,/g, "")));
 
 if (numbers.some(isNaN)) {
   console.error("Please provide valid numbers to calculate the average.");
