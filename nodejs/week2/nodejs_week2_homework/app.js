@@ -2,9 +2,12 @@ import express from "express";
 const app = express();
 const port = process.env.PORT || 3000;
 
-import fs from "fs";
-const loadDocuments = () =>
-  JSON.parse(fs.readFileSync("documents.json", "utf-8"));
+import { promises as fs } from "fs"; 
+
+const loadDocuments = async () => {
+  const data = await fs.readFile("documents.json", "utf-8");
+  return JSON.parse(data);
+};
 
 // Support parsing JSON requests
 app.use(express.json());
