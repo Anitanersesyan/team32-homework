@@ -1,0 +1,28 @@
+{
+  "name": "team32-homework",
+  "version": "1.0.0",
+  "description": "## Get git ready to work on homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anitanersesyan/team32-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anitanersesyan/team32-homework/issues"
+  },
+  "homepage": "https://github.com/Anitanersesyan/team32-homework#readme",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
