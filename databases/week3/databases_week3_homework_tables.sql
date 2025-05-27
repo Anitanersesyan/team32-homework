@@ -9,6 +9,7 @@ CREATE TABLE meal (
     max_reservations INT NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     created_date NOT NULL DEFAULT CURRENT_DATE
+    created_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE reservation (
@@ -24,7 +25,14 @@ CREATE TABLE reservation (
 
 --Drop foreign key constraint and re-add it with ON DELETE CASCADE to ensure that when a meal is deleted, all associated reservations are also deleted. (Otherwise you would get an error in query 5)
 ALTER TABLE reservation DROP FOREIGN KEY reservation_ibfk_1;
+    created_date DATE DEFAULT (CURRENT_DATE),  -- Fixed missing type and parentheses
+    contact_phonenumber VARCHAR(255) NOT NULL,
+    contact_name VARCHAR(255) NOT NULL,
+    contact_email VARCHAR(255) NOT NULL,
+    FOREIGN KEY (meal_id) REFERENCES meal(id)
+);
 
+--Drop foreign key constraint and re-add it with ON DELETE CASCADE to ensure that when a meal is deleted, all associated reservations are also deleted. (Otherwise you would get an error in query 5)
 ALTER table reservation
 ADD FOREIGN KEY (meal_id) REFERENCES meal (id) ON DELETE CASCADE
 
@@ -36,6 +44,10 @@ CREATE TABLE review (
     stars INT NOT NULL,
     created_date DEFAULT CURRENT_DATE,
     FOREIGN KEY (meal_id) REFERENCES meal (id)
+    stars INT NOT NULL CHECK (stars BETWEEN 1 AND 5),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (meal_id) REFERENCES meal(id) ON DELETE CASCADE
 );
 
 --Drop foreign key constraint and re-add it with ON DELETE CASCADE to ensure that when a meal is deleted, all associated reservations are also deleted. (Otherwise you would get an error in query 5)
